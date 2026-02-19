@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walnut Creek Remodeling — Kitchen & Bathroom Remodeling in Walnut Creek & Surrounding Areas</title>
+    <meta name="description" content="Professional kitchen and bathroom remodeling in Walnut Creek & Surrounding Areas. 35% off kitchens, 25% off bathrooms, free 3D design. Licensed & insured. 21+ years experience.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,58,95,0.88)),
+                        url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80') center/cover;
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 16px; font-weight: 800; letter-spacing: -0.5px; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 24px; }
+        
+        .cta-btn {
+            display: inline-block;
+            background: #f59e0b;
+            color: #1a1a1a;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.4); }
+        
+        .phone-link { display: block; margin-top: 16px; color: white; font-size: 1.1rem; text-decoration: none; opacity: 0.9; }
+        .phone-link:hover { opacity: 1; }
+        
+        .offers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 960px;
+            margin: -50px auto 60px;
+            padding: 0 20px;
+        }
+        .offer-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        }
+        .offer-card .discount { font-size: 2.4rem; font-weight: 800; color: #f59e0b; }
+        .offer-card h3 { margin: 8px 0; font-size: 1.2rem; }
+        .offer-card p { color: #666; font-size: 0.95rem; }
+        
+        .section { padding: 60px 20px; max-width: 960px; margin: 0 auto; }
+        .section h2 { font-size: 2rem; margin-bottom: 16px; text-align: center; font-weight: 700; }
+        .section .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 1.05rem; }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .service-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .service-item img { width: 100%; height: 200px; object-fit: cover; }
+        .service-item .content { padding: 20px; }
+        .service-item h3 { font-size: 1.15rem; margin-bottom: 8px; }
+        .service-item p { color: #666; font-size: 0.9rem; }
+        
+        .process {
+            background: #f8fafc;
+            padding: 60px 20px;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .step { text-align: center; padding: 20px; }
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px; height: 48px;
+            background: #1e3a5f;
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        .step h3 { margin-bottom: 8px; font-size: 1.05rem; }
+        .step p { color: #666; font-size: 0.9rem; }
+        
+        .trust {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .trust-items { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
+        .trust-item { text-align: center; }
+        .trust-item .num { font-size: 2rem; font-weight: 800; color: #1e3a5f; }
+        .trust-item .label { color: #666; font-size: 0.9rem; }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a5f, #0f172a);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 12px; }
+        .cta-section p { opacity: 0.9; margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        
+        footer {
+            background: #0f172a;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 24px 20px;
+            font-size: 0.85rem;
+        }
+        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .offers { grid-template-columns: 1fr; margin-top: -30px; }
+            .trust-items { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-badge">Serving Walnut Creek & Surrounding Areas — Licensed & Insured</div>
+        <h1>Walnut Creek's #1 Remodeling Company</h1>
+        <p>Your neighbors trust us. See why Walnut Creek homeowners choose us for their kitchen and bathroom renovations.</p>
+        <a href="tel:4159079070" class="cta-btn">Get Your Free Estimate</a>
+        <a href="tel:4159079070" class="phone-link">Or call us: (415) 907-9070</a>
+    </section>
+
+    <div class="offers">
+        <div class="offer-card">
+            <div class="discount">35% Off</div>
+            <h3>Kitchen Remodels</h3>
+            <p>Transform your kitchen with a complete remodel at an unbeatable price.</p>
+        </div>
+        <div class="offer-card">
+            <div class="discount">25% Off</div>
+            <h3>Bathroom Remodels</h3>
+            <p>Upgrade your bathroom with quality renovations tailored to your style.</p>
+        </div>
+        <div class="offer-card">
+            <div class="discount">Free</div>
+            <h3>3D Design & Rendering</h3>
+            <p>See your dream space before we build it with complimentary 3D designs.</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Our Services</h2>
+        <p class="subtitle">From kitchens and bathrooms to full home renovations, we handle it all.</p>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Kitchen Remodeling">
+                <div class="content">
+                    <h3>Kitchen Remodeling</h3>
+                    <p>Custom cabinetry, countertops, fixtures, and layouts designed around how you live.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80" alt="Bathroom Remodeling">
+                <div class="content">
+                    <h3>Bathroom Remodeling</h3>
+                    <p>Modern bathrooms with premium materials, expert tile work, and smart design.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Full Home Renovation">
+                <div class="content">
+                    <h3>Full Home Renovation</h3>
+                    <p>Complete home transformations that increase your property value and quality of life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div style="max-width:960px;margin:0 auto;">
+            <h2 style="text-align:center;margin-bottom:40px;">How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>We visit your home, discuss your vision, and assess the project scope.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>3D Design</h3>
+                    <p>See your new space in 3D before construction begins. Completely free.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Build & Install</h3>
+                    <p>Our expert team brings the design to life with quality craftsmanship.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>Final Walkthrough</h3>
+                    <p>We walk through every detail together to ensure your complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust">
+        <h2>Why Homeowners Trust Us</h2>
+        <div class="trust-items">
+            <div class="trust-item">
+                <div class="num">21+</div>
+                <div class="label">Years Experience</div>
+            </div>
+            <div class="trust-item">
+                <div class="num">200+</div>
+                <div class="label">5-Star Reviews</div>
+            </div>
+            <div class="trust-item">
+                <div class="num">500+</div>
+                <div class="label">Projects Completed</div>
+            </div>
+            <div class="trust-item">
+                <div class="num">100%</div>
+                <div class="label">Licensed & Insured</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Transform Your Home?</h2>
+        <p>Get a free estimate and see what's possible with our complimentary 3D design service.</p>
+        <a href="tel:4159079070" class="cta-btn">Call (415) 907-9070</a>
+    </section>
+
+    <footer>
+        <p>Walnut Creek Remodeling — Serving Walnut Creek & Surrounding Areas</p>
+        <p style="margin-top:8px;">Walnut Creek, CA</p>
+        <p style="margin-top:8px;"><a href="tel:4159079070">(415) 907-9070</a></p>
+        <p style="margin-top:16px;">&copy; 2026 Walnut Creek Remodeling. All rights reserved.</p>
+    </footer>
+</body>
+</html>
