@@ -151,6 +151,21 @@ footer a { color: var(--amber-light); text-decoration: none; }
   .local-card { padding: 32px; }
   .top-bar .container { justify-content: center; text-align: center; }
 }
+
+.contact-form-section{padding:60px 20px;background:#f8fafc}
+.contact-form-section h2{font-size:2rem;margin-bottom:8px;text-align:center;font-weight:700}
+.contact-form-section .subtitle{text-align:center;color:#666;margin-bottom:32px;font-size:1.05rem}
+.contact-form{max-width:520px;margin:0 auto;background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,0.08)}
+.contact-form label{display:block;font-weight:600;margin-bottom:4px;font-size:0.95rem}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:16px;transition:border-color 0.2s}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#1e3a5f}
+.contact-form textarea{min-height:100px;resize:vertical}
+.contact-form button{width:100%;background:#f59e0b;color:#1a1a1a;padding:14px;border:none;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s}
+.contact-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,0.4)}
+.contact-form button:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none}
+.form-status{text-align:center;margin-top:16px;font-size:0.95rem;min-height:24px}
+.form-status.success{color:#16a34a}
+.form-status.error{color:#dc2626}
 </style>
 </head>
 <body>
@@ -358,6 +373,27 @@ footer a { color: var(--amber-light); text-decoration: none; }
   </div>
 </section>
 
+<section class="contact-form-section" id="contact">
+<div style="max-width:960px;margin:0 auto;">
+<h2>Get Your Free Estimate</h2>
+<p class="subtitle">Tell us about your project and we'll get back to you right away.</p>
+<form class="contact-form" id="contactForm" novalidate>
+<label for="cf-name">Name</label>
+<input type="text" id="cf-name" name="name" required placeholder="Your name" autocomplete="name">
+<label for="cf-phone">Phone</label>
+<input type="tel" id="cf-phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
+<label for="cf-email">Email</label>
+<input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email">
+<label for="cf-message">Tell us about your project</label>
+<textarea id="cf-message" name="message" required placeholder="What are you looking to remodel? Any details help us give you a better estimate."></textarea>
+<input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+<button type="submit">Send Message</button>
+<div class="form-status" id="formStatus"></div>
+</form>
+<noscript><p style="text-align:center;margin-top:16px;color:#666;">Forms require JavaScript. Call us at <a href="tel:4159079070">(415) 907-9070</a> instead.</p></noscript>
+</div>
+</section>
+
 <section class="cta">
   <div class="container">
     <div class="cta-grid">
@@ -389,37 +425,29 @@ footer a { color: var(--amber-light); text-decoration: none; }
 </footer>
 
 
-    <script>
-    (function(){
-        var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
-        if(!f)return;
-        f.addEventListener('submit',function(e){
-            e.preventDefault();
-            s.className='form-status';s.textContent='';
-            var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
-            var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),
-                   message:f.message.value.trim(),domain:location.hostname,website:f.website.value};
-            if(!d.name||!d.phone||!d.email||!d.message){
-                s.className='form-status error';s.textContent='Please fill in all fields.';
-                b.disabled=false;b.textContent='Send Message';return;
-            }
-            fetch('https://app.revnodeai.com/api/public/contact-form',{
-                method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)
-            }).then(function(r){return r.json()}).then(function(j){
-                if(j.status==='ok'){
-                    s.className='form-status success';
-                    s.textContent='Thank you! We\'ll be in touch shortly.';
-                    f.reset();
-                }else{
-                    s.className='form-status error';
-                    s.textContent=j.message||'Something went wrong. Please call us at (415) 907-9070.';
-                }
-            }).catch(function(){
-                s.className='form-status error';
-                s.textContent='Something went wrong. Please call us at (415) 907-9070.';
-            }).finally(function(){b.disabled=false;b.textContent='Send Message';});
-        });
-    })();
-    </script>
+    
+<script>
+(function(){
+var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
+if(!f)return;
+f.addEventListener('submit',function(e){
+e.preventDefault();
+s.className='form-status';s.textContent='';
+var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
+var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),
+       message:f.message.value.trim(),domain:location.hostname,website:f.website.value};
+if(!d.name||!d.phone||!d.email||!d.message){
+s.className='form-status error';s.textContent='Please fill in all fields.';
+b.disabled=false;b.textContent='Send Message';return;}
+fetch('https://app.revnodeai.com/api/public/contact-form',{
+method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)
+}).then(function(r){return r.json()}).then(function(j){
+if(j.status==='ok'){s.className='form-status success';s.textContent='Thank you! We\'ll be in touch shortly.';f.reset();}
+else{s.className='form-status error';s.textContent=j.message||'Something went wrong. Please call us at (415) 907-9070.';}
+}).catch(function(){s.className='form-status error';s.textContent='Something went wrong. Please call us at (415) 907-9070.';
+}).finally(function(){b.disabled=false;b.textContent='Send Message';});
+});
+})();
+</script>
 </body>
 </html>
