@@ -5,422 +5,545 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Walnut Creek Remodeling — Kitchen & Bath Renovation</title>
 <meta name="description" content="Walnut Creek's premier remodeling contractor. Kitchen, bathroom, and full home renovation. 21+ years experience.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-  --primary: #8A5A4A; --primary-dark: #6E4030; --primary-light: #B08070;
-  --dark: #1A100C; --dark-light: #5A3A2A;
-  --text: #2E1E18; --text-light: #8A6A5A;
-  --bg: #FDFAF8; --bg-alt: #F5EDE8; --white: #FFFFFF;
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#C4A265;--gold-dark:#A8884D;--gold-light:#D4B87A;--gold-pale:#F0E6D3;
+  --dark:#1a1a1a;--text:#333;--text-light:#666;--gray-bg:#f7f5f2;
+  --white:#fff;--radius:8px;
 }
-body { font-family: 'Roboto', sans-serif; color: var(--text); line-height: 1.6; }
-h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--dark); line-height: 1.2; font-weight: 700; }
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.btn { display: inline-block; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.25s; cursor: pointer; border: none; font-family: 'Poppins', sans-serif; }
-.btn-primary { background: var(--primary); color: var(--white); }
-.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-.btn-white { background: var(--white); color: var(--dark); }
-.btn-white:hover { background: #F1F5F9; }
-.btn-outline { border: 2px solid var(--primary-light); color: var(--primary-light); background: transparent; }
-.btn-outline:hover { background: var(--primary-light); color: var(--white); }
-.section-label { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-.section-title { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
-.section-subtitle { color: var(--text-light); font-size: 17px; max-width: 640px; }
-.text-center { text-align: center; }
-.mx-auto { margin-left: auto; margin-right: auto; }
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--text);line-height:1.7;font-weight:400;font-size:16px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dark);line-height:1.25;font-weight:600}
+h4,h5,h6{font-family:'Poppins',sans-serif;font-weight:600;color:var(--dark)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{display:inline-block;font-family:'Poppins',sans-serif;font-weight:500;font-size:16px;padding:16px 36px;border-radius:30px;border:none;cursor:pointer;transition:all 0.3s;text-align:center}
+.btn-gold{background:var(--gold);color:var(--white)}
+.btn-gold:hover{background:var(--gold-dark)}
+.btn-outline{border:2px solid var(--gold);color:var(--gold);background:transparent}
+.btn-outline:hover{background:var(--gold);color:var(--white)}
 
-.site-nav { background: #fff; padding: 0; border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-.site-nav .nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
-.site-nav .nav-logo { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--dark); text-decoration: none; white-space: nowrap; }
-.site-nav .nav-logo span { color: var(--primary); }
-.site-nav .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
-.site-nav .nav-links a { font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; transition: color 0.2s; padding: 6px 0; }
-.site-nav .nav-links a:hover { color: var(--primary); }
-.site-nav .nav-links a.nav-cta-btn { background: var(--primary); color: #fff !important; padding: 10px 22px !important; border-radius: 6px; font-weight: 600; font-size: 14px; transition: background 0.2s; display: inline-block; }
-.site-nav .nav-links a.nav-cta-btn:hover { background: var(--primary-dark); }
-.site-nav .nav-links a.nav-phone { font-weight: 600; color: var(--dark) !important; }
-.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
-.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; }
+/* ── HEADER ── */
+.site-header{position:sticky;top:0;z-index:100;background:var(--white);padding:0;border-bottom:1px solid rgba(0,0,0,0.06)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:18px 24px}
+.site-logo{display:flex;align-items:center;gap:12px}
+.site-logo img,.site-logo svg{height:50px;width:auto}
+.site-logo svg{fill:var(--gold)}
+.site-logo-text{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--dark);line-height:1}
+.site-logo-text span{display:block;font-size:14px;font-weight:400;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+.header-right{display:flex;align-items:center;gap:16px}
+.header-phone{display:none;align-items:center;gap:8px;font-weight:600;color:var(--dark);font-size:15px}
+.header-phone svg{width:18px;height:18px;fill:var(--gold)}
+.menu-toggle{width:44px;height:44px;background:var(--gold);border:none;border-radius:8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--white);border-radius:1px}
+@media(min-width:768px){.header-phone{display:flex}}
+
+/* Mobile menu */
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--white);z-index:200;padding:80px 32px 32px;overflow-y:auto}
+.mobile-menu.open{display:block}
+.mobile-menu-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:32px;cursor:pointer;color:var(--dark);width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.mobile-menu a{display:block;font-size:18px;padding:16px 0;border-bottom:1px solid #eee;color:var(--text);font-weight:500}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-menu a:last-child{border:none}
+
+/* ── HERO ── */
+.hero{position:relative;height:85vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.4) 100%)}
+.hero-content{position:relative;z-index:2;color:var(--white);max-width:860px;padding:0 24px}
+.hero h1{font-size:clamp(32px,5.5vw,60px);color:var(--white);margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.hero-tagline{font-family:'Poppins',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-light);margin-bottom:20px;font-weight:400}
+.hero-desc{font-size:17px;line-height:1.7;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;font-weight:300;opacity:0.95}
+.hero .btn{font-size:15px;padding:14px 32px}
+
+/* ── STICKY CTA BAR ── */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--white);border-top:1px solid rgba(0,0,0,0.08);padding:10px 24px;display:flex;justify-content:center;gap:12px;box-shadow:0 -2px 10px rgba(0,0,0,0.06)}
+.sticky-bar .btn{padding:12px 28px;font-size:14px}
+.sticky-bar .btn-dark{background:var(--dark);color:var(--white);border-radius:30px}
+.sticky-bar .btn-dark:hover{background:#333}
+
+/* ── PROMO CAROUSEL ── */
+.promo-bar{background:var(--dark);padding:40px 0;overflow:hidden}
+.promo-slides{display:flex;transition:transform 0.5s ease;width:300%}
+.promo-slide{flex:0 0 33.333%;padding:0 24px}
+.promo-slide-inner{max-width:1000px;margin:0 auto;text-align:center;color:var(--white);padding:20px}
+.promo-slide h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold-light);margin-bottom:8px}
+.promo-slide p{font-size:15px;color:rgba(255,255,255,0.7);max-width:500px;margin:0 auto}
+.promo-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+.promo-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.3);border:none;cursor:pointer;padding:0}
+.promo-dot.active{background:var(--gold)}
+
+/* ── SECTIONS ── */
+.section{padding:80px 0}
+.section-gray{background:var(--gray-bg)}
+.section-header{text-align:center;margin-bottom:48px}
+.section-label{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block}
+.section-title{font-size:clamp(26px,3.5vw,42px);margin-bottom:14px}
+.section-desc{font-size:16px;color:var(--text-light);max-width:640px;margin:0 auto;line-height:1.7}
+
+/* ── SERVICES ── */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.1)}
+.svc-card-img{height:220px;overflow:hidden}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.svc-card:hover .svc-card-img img{transform:scale(1.05)}
+.svc-card-body{padding:24px}
+.svc-card h3{font-size:24px;margin-bottom:8px}
+.svc-card p{font-size:15px;color:var(--text-light);line-height:1.6;margin-bottom:16px}
+.svc-card .link{font-family:'Poppins',sans-serif;font-weight:600;color:var(--gold);font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.svc-card .link:hover{gap:10px}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* ── REVIEWS ── */
+.reviews-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px;scrollbar-width:none}
+.reviews-track::-webkit-scrollbar{display:none}
+.review-card{flex:0 0 340px;scroll-snap-align:start;background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.review-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.review-avatar{width:44px;height:44px;border-radius:50%;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-dark);font-weight:600}
+.review-name{font-weight:600;font-size:15px;color:var(--dark)}
+.review-date{font-size:12px;color:var(--text-light)}
+.review-stars{color:#F59E0B;font-size:18px;letter-spacing:1px;margin-bottom:10px}
+.review-card p{font-size:14px;line-height:1.7;color:var(--text)}
+.review-platforms{display:flex;justify-content:center;gap:24px;margin-top:32px;align-items:center;flex-wrap:wrap}
+.review-platforms span{font-size:14px;color:var(--text-light);font-weight:500}
+
+/* ── TRUST / WHY US ── */
+.trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.trust-item{display:flex;gap:16px;padding:24px;border-radius:var(--radius);background:var(--white);box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.trust-icon{flex-shrink:0;width:52px;height:52px;background:var(--gold-pale);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.trust-icon svg{width:24px;height:24px;stroke:var(--gold-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trust-item h4{font-size:17px;margin-bottom:4px}
+.trust-item p{font-size:14px;color:var(--text-light);line-height:1.5}
+@media(max-width:600px){.trust-grid{grid-template-columns:1fr}}
+
+/* ── PROCESS ── */
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:step}
+.proc-step{text-align:center;position:relative;padding-top:60px}
+.proc-step::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;top:0;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--gold);opacity:0.6}
+.proc-step h4{font-size:16px;margin-bottom:6px}
+.proc-step p{font-size:13px;color:var(--text-light);line-height:1.5}
+@media(max-width:768px){.process-grid{grid-template-columns:repeat(2,1fr);gap:32px}.proc-step:last-child{grid-column:span 2;max-width:300px;margin:0 auto}}
+@media(max-width:500px){.process-grid{grid-template-columns:1fr}.proc-step:last-child{grid-column:auto}}
+
+/* ── GALLERY ── */
+.gallery{padding:80px 0;background:var(--gray-bg)}
+.gallery-filters{display:flex;justify-content:center;gap:10px;margin-bottom:32px;flex-wrap:wrap}
+.g-filter{padding:8px 22px;border:2px solid #ddd;border-radius:30px;background:var(--white);font-size:14px;font-weight:500;color:var(--text);cursor:pointer;font-family:'Poppins',sans-serif;transition:all 0.2s}
+.g-filter:hover{border-color:var(--gold);color:var(--gold)}
+.g-filter.active{background:var(--gold);color:var(--white);border-color:var(--gold)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.g-item{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.g-item:hover img{transform:scale(1.06)}
+.g-item .g-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 40%);opacity:0;transition:opacity 0.3s;display:flex;align-items:flex-end;padding:16px}
+.g-item:hover .g-ov{opacity:1}
+.g-ov span{color:var(--white);font-weight:500;font-size:14px}
+.g-more{text-align:center;margin-top:32px}
+.g-more button{padding:12px 36px;background:var(--dark);color:var(--white);border:none;border-radius:30px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Poppins',sans-serif}
+.g-more button:hover{background:#333}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+
+/* ── LIGHTBOX ── */
+.lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center}
+.lightbox.active{display:flex}
+.lightbox img{max-width:90vw;max-height:85vh;border-radius:6px;object-fit:contain}
+.lb-close{position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:36px;cursor:pointer;opacity:0.8}
+.lb-close:hover{opacity:1}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:28px;padding:12px 18px;cursor:pointer;border-radius:6px}
+.lb-nav:hover{background:rgba(255,255,255,0.3)}
+.lb-prev{left:16px}
+.lb-next{right:16px}
+.lb-count{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.7);font-size:14px}
+
+/* ── CONTACT ── */
+.contact{padding:80px 0;background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 100%);color:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.contact-left h2{color:var(--white);font-size:clamp(28px,3.5vw,42px);margin-bottom:14px}
+.contact-left p{color:rgba(255,255,255,0.7);font-size:16px;line-height:1.7;margin-bottom:28px}
+.ct-list{display:flex;flex-direction:column;gap:14px}
+.ct-item{display:flex;align-items:center;gap:12px}
+.ct-dot{width:40px;height:40px;background:rgba(196,162,101,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ct-dot svg{width:20px;height:20px;stroke:var(--gold-light);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ct-item strong{color:var(--white);font-size:14px}
+.ct-item .ct-sub{color:rgba(255,255,255,0.5);font-size:12px}
+.contact-form-card{background:var(--white);border-radius:12px;padding:36px;box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.cf-title{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--dark);text-align:center;margin-bottom:4px}
+.cf-sub{font-size:13px;color:var(--text-light);text-align:center;margin-bottom:20px}
+.contact-form-card label{display:block;font-weight:500;font-size:13px;color:var(--dark);margin-bottom:4px}
+.contact-form-card input,.contact-form-card textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:var(--radius);font-size:15px;font-family:'Poppins',sans-serif;margin-bottom:14px;transition:border-color 0.2s}
+.contact-form-card input:focus,.contact-form-card textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,162,101,0.1)}
+.contact-form-card textarea{min-height:80px;resize:vertical}
+.contact-form-card button[type="submit"]{width:100%;background:var(--gold);color:var(--white);padding:16px;border:none;border-radius:30px;font-weight:600;font-size:16px;cursor:pointer;font-family:'Poppins',sans-serif;transition:background 0.2s}
+.contact-form-card button[type="submit"]:hover{background:var(--gold-dark)}
+.contact-form-card button:disabled{opacity:0.6;cursor:not-allowed}
+.form-status{text-align:center;margin-top:10px;font-size:14px;min-height:18px}
+.form-status.success{color:#16a34a}.form-status.error{color:#dc2626}
+.form-fb{text-align:center;margin-top:8px;font-size:13px;color:var(--text-light)}
+.form-fb a{color:var(--gold);font-weight:600}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ── FAQ ── */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid #eee}
+.faq-q{width:100%;background:none;border:none;padding:18px 0;font-size:16px;font-weight:600;color:var(--dark);text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Poppins',sans-serif;gap:16px}
+.faq-q:hover{color:var(--gold)}
+.faq-q::after{content:'+';font-size:22px;color:var(--gold);flex-shrink:0;transition:transform 0.3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding-bottom:18px;color:var(--text-light);line-height:1.7;font-size:15px}
+
+/* ── CTA BANNER ── */
+.cta-banner{position:relative;padding:80px 0;text-align:center;overflow:hidden}
+.cta-banner-bg{position:absolute;inset:0;background:url('images/hero-kitchen-2.jpg') center/cover;filter:brightness(0.4)}
+.cta-banner-content{position:relative;z-index:2;color:var(--white)}
+.cta-banner h2{color:var(--white);font-size:clamp(28px,4vw,46px);margin-bottom:14px}
+.cta-banner p{font-size:17px;opacity:0.85;max-width:560px;margin:0 auto 28px}
+.cta-banner .phone-big{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);color:var(--gold-light);margin-top:20px}
+.cta-banner .phone-big a{color:var(--gold-light)}
+
+/* ── FOOTER ── */
+.site-footer{position:relative;overflow:hidden}
+.footer-bg{position:absolute;inset:0;background:url('images/hero-bathroom-1.jpg') center/cover}
+.footer-bg::after{content:'';position:absolute;inset:0;background:rgba(10,15,20,0.92)}
+.footer-inner{position:relative;z-index:2;padding:56px 0 24px;color:rgba(255,255,255,0.65)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--white);margin-bottom:12px;font-weight:700}
+.footer-brand em{color:var(--gold-light);font-style:normal}
+.footer-text{font-size:14px;line-height:1.7;margin-bottom:16px}
+.footer-phone a{color:var(--gold-light);font-weight:600}
+.site-footer h4{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px}
+.site-footer ul{list-style:none}
+.site-footer ul li{margin-bottom:6px}
+.site-footer ul a{font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s}
+.site-footer ul a:hover{color:var(--gold-light)}
+.footer-bar{border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.35);flex-wrap:wrap;gap:8px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+
+/* ── RESPONSIVE ── */
 @media(max-width:768px){
-.nav-hamburger { display: flex; }
-.site-nav .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.08); gap: 0; }
-.site-nav .nav-links.open { display: flex; }
-.site-nav .nav-links a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; width: 100%; }
-.site-nav .nav-links a:last-child { border: none; }
-.site-nav .nav-links a.nav-cta-btn { text-align: center; margin-top: 8px; display: block; padding: 12px 22px !important; }
+  .section{padding:60px 0}
+  .hero{height:75vh;min-height:500px}
+  body{padding-bottom:56px}
 }
-
-.hero { min-height: 90vh; display: flex; align-items: center; background: var(--bg); padding: 100px 0 80px; }
-.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.hero-content { padding: 20px 0; }
-.hero-badge { display: inline-block; background: rgba(0,0,0,0.06); color: var(--primary); padding: 6px 16px; border-radius: 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-.hero h1 { font-size: clamp(34px,4.5vw,52px); margin-bottom: 20px; }
-.hero p { font-size: 18px; line-height: 1.7; color: var(--text-light); margin-bottom: 32px; }
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-.hero-stats { display: flex; gap: 32px; margin-top: 40px; padding-top: 24px; border-top: 1px solid #E5E7EB; }
-.hero-stat strong { display: block; font-size: 26px; font-family: 'Poppins', sans-serif; color: var(--primary); }
-.hero-stat span { font-size: 13px; color: var(--text-light); text-transform: uppercase; }
-.hero-img { border-radius: 16px; width: 100%; height: 520px; object-fit: cover; box-shadow: 0 24px 64px rgba(0,0,0,0.12); }
-@media(max-width:768px){ .hero-inner { grid-template-columns: 1fr; gap: 32px; } .hero-img { height: 300px; order: -1; } .hero { min-height: auto; padding: 80px 0 60px; } }
-
-.contact-form-section { padding: 64px 0; background: linear-gradient(135deg, #0F172A 0%, var(--dark) 100%); color: #fff; position: relative; overflow: hidden; }
-.contact-form-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, transparent 70%); pointer-events: none; }
-.form-layout { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.form-pitch h2 { font-family: 'Poppins', sans-serif; font-size: clamp(30px,4vw,44px); color: #fff; margin-bottom: 16px; }
-.form-pitch p { color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px; }
-.form-trust-items { display: flex; flex-direction: column; gap: 16px; }
-.form-trust-item { display: flex; align-items: center; gap: 14px; }
-.form-trust-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.form-trust-icon svg { width: 22px; height: 22px; stroke: var(--primary-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.form-trust-item strong { display: block; color: #fff; font-size: 0.95rem; }
-.form-trust-item span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
-@media(max-width:768px){ .form-layout { grid-template-columns: 1fr; gap: 36px; } .form-pitch { text-align: center; } .form-trust-items { align-items: center; } }
-
-.contact-form { max-width: 480px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; z-index: 2; }
-.contact-form .form-title { font-family: 'Poppins', sans-serif; font-size: 24px; color: var(--dark); margin-bottom: 4px; text-align: center; font-weight: 700; }
-.contact-form .form-subtitle { color: var(--text-light); font-size: 0.9rem; text-align: center; margin-bottom: 24px; }
-.contact-form label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.9rem; color: var(--dark); }
-.contact-form input, .contact-form textarea { width: 100%; padding: 11px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 0.95rem; font-family: 'Roboto', sans-serif; margin-bottom: 14px; transition: border-color 0.2s, box-shadow 0.2s; }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,0,0,0.05); }
-.contact-form textarea { min-height: 80px; resize: vertical; }
-.contact-form button[type="submit"] { width: 100%; background: var(--primary); color: #fff; padding: 15px; border: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 0.2s, transform 0.2s; font-family: 'Poppins', sans-serif; }
-.contact-form button[type="submit"]:hover { background: var(--primary-dark); transform: translateY(-1px); }
-.contact-form button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-.form-status { text-align: center; margin-top: 12px; font-size: 0.9rem; min-height: 20px; }
-.form-status.success { color: #16a34a; }
-.form-status.error { color: #dc2626; }
-.form-phone-fallback { text-align: center; margin-top: 12px; font-size: 0.85rem; color: var(--text-light); }
-.form-phone-fallback a { color: var(--primary); font-weight: 600; }
-
-.offers { padding: 80px 0; background: var(--bg); }
-.offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
-.offer-card { background: var(--white); border: 2px solid var(--primary-light); border-radius: 4px; padding: 36px; text-align: center; transition: border-color 0.25s; }
-.offer-card:hover { border-color: var(--primary); }
-.offer-pct { font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 800; color: var(--primary); line-height: 1; }
-.offer-label { font-size: 14px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
-.offer-card h3 { margin-top: 16px; font-size: 22px; }
-.offer-card p { margin-top: 8px; color: var(--text-light); font-size: 15px; }
-.services { padding: 80px 0; background: var(--bg-alt); }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-top: 48px; }
-.service-item { display: flex; gap: 20px; align-items: flex-start; padding: 24px; border: 1px solid #E5E7EB; border-radius: 4px; background: var(--white); }
-.service-icon { flex-shrink: 0; width: 56px; height: 56px; background: var(--bg-alt); color: var(--primary); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
-.service-item h3 { font-size: 20px; margin-bottom: 6px; }
-.service-item p { color: var(--text-light); font-size: 15px; }
-
-.process { padding: 80px 0; background: var(--white); }
-.process-steps { max-width: 720px; margin: 48px auto 0; position: relative; }
-.process-steps::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 2px; background: #E5E7EB; }
-.step { display: flex; gap: 28px; margin-bottom: 40px; position: relative; }
-.step:last-child { margin-bottom: 0; }
-.step-number { flex-shrink: 0; width: 60px; height: 60px; background: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; color: var(--primary-light); position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-.step-content { padding-top: 12px; }
-.step h3 { font-size: 18px; margin-bottom: 6px; }
-.step p { color: var(--text-light); font-size: 15px; line-height: 1.7; }
-
-.reviews { padding: 80px 0; background: var(--bg); }
-.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; margin-top: 48px; }
-.review-card { background: var(--white); border-radius: 4px; padding: 36px; border: 2px solid #E5E7EB; border-top: 3px solid var(--primary); }
-.review-stars { color: var(--primary); font-size: 18px; letter-spacing: 2px; margin-bottom: 16px; }
-.review-card blockquote { font-size: 16px; line-height: 1.7; color: var(--text); font-style: italic; margin-bottom: 20px; }
-.review-author { font-weight: 700; color: var(--dark); }
-.review-location { font-size: 14px; color: var(--text-light); }
-@media(max-width:768px){ .reviews-grid { grid-template-columns: 1fr; } }
-
-.local { padding: 80px 0; }
-.local-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 40px; }
-.local-img { border-radius: 12px; width: 100%; height: 420px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-.local-text h3 { font-size: 28px; margin-bottom: 16px; }
-.local-text p { color: var(--text-light); font-size: 16px; margin-bottom: 16px; line-height: 1.8; }
-.local-text ul { list-style: none; margin-top: 20px; }
-.local-text ul li { padding: 8px 0 8px 24px; position: relative; color: var(--text); font-size: 15px; }
-.local-text ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 10px; height: 10px; background: var(--primary); border-radius: 2px; }
-@media(max-width:768px){ .local-split { grid-template-columns: 1fr; gap: 32px; } }
-
-.cta { padding: 80px 0; background: linear-gradient(135deg, var(--dark) 0%, #0F172A 100%); color: #fff; text-align: center; }
-.cta h2 { color: #fff; font-size: clamp(30px,4vw,44px); margin-bottom: 16px; }
-.cta p { opacity: 0.85; font-size: 18px; max-width: 560px; margin: 0 auto 32px; }
-.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.cta-phone { font-family: 'Poppins', sans-serif; font-size: 32px; color: var(--primary-light); margin-top: 28px; font-weight: 700; }
-.cta-phone a { color: var(--primary-light); text-decoration: none; }
-
-footer { background: #0F1924; color: rgba(255,255,255,0.6); padding: 48px 0 24px; font-size: 14px; }
-footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-footer a { color: var(--primary-light); text-decoration: none; }
-.footer-license { text-align: center; padding: 8px 0 0; font-size: 0.8rem; opacity: 0.6; color: rgba(255,255,255,0.5); }
-
-.gallery-section { padding: 80px 0; background: var(--bg); }
-.gallery-section .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.gallery-header { text-align: center; margin-bottom: 48px; }
-.gallery-header .gallery-label { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
-.gallery-header h2 { font-family: 'Poppins', sans-serif; font-size: clamp(28px,4vw,42px); color: var(--dark); margin-bottom: 16px; }
-.gallery-header p { color: var(--text-light); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
-.gallery-filters { display: flex; justify-content: center; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
-.gallery-filter-btn { padding: 8px 20px; border: 2px solid #E5E7EB; border-radius: 24px; background: #fff; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s; font-family: 'Roboto', sans-serif; }
-.gallery-filter-btn:hover { border-color: var(--primary); color: var(--primary); }
-.gallery-filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
-.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-.gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
-.gallery-item:hover img { transform: scale(1.05); }
-.gallery-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
-.gallery-item:hover .overlay { opacity: 1; }
-.overlay-text { color: #fff; font-weight: 600; font-size: 15px; }
-.gallery-show-more { text-align: center; margin-top: 36px; }
-.gallery-show-more button { padding: 14px 36px; background: var(--dark); color: #fff; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: 'Roboto', sans-serif; transition: background 0.2s; }
-.gallery-show-more button:hover { background: var(--dark-light); }
-@media(max-width:768px){ .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; } .gallery-item { border-radius: 8px; } }
-
-.lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
-.lightbox.active { display: flex; }
-.lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
-.lightbox-close { position: absolute; top: 20px; right: 28px; background: none; border: none; color: #fff; font-size: 36px; cursor: pointer; z-index: 10001; opacity: 0.8; }
-.lightbox-close:hover { opacity: 1; }
-.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: #fff; font-size: 28px; padding: 12px 18px; cursor: pointer; border-radius: 6px; transition: background 0.2s; }
-.lightbox-nav:hover { background: rgba(255,255,255,0.3); }
-.lightbox-prev { left: 20px; }
-.lightbox-next { right: 20px; }
-.lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 14px; }
-@media(max-width:768px){ .lightbox-nav { padding: 8px 12px; font-size: 22px; } }
-.section-title { letter-spacing: -0.3px; } .section-label { letter-spacing: 3px; }
 </style>
 </head>
 <body>
-<nav class="site-nav">
-<div class="nav-inner">
-  <a href="#" class="nav-logo">Walnut Creek<span>Remodeling</span></a>
-  <button class="nav-hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#gallery">Our Work</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="tel:4159079070" class="nav-phone">(415) 907-9070</a></li>
-    <li><a href="#contact" class="nav-cta-btn">Free Estimate</a></li>
-  </ul>
+
+<!-- HEADER -->
+<header class="site-header">
+<div class="header-inner">
+  <a href="#" class="site-logo">
+    <svg viewBox="0 0 60 55"><path d="M30 2L2 26h8v24h16V34h8v16h16V26h8L30 2z" fill="#C4A265"/><path d="M30 8l22 18v22H38V32H22v16H8V26L30 8z" fill="#fff"/><path d="M30 14l16 13v17H32V30h-4v14H14V27L30 14z" fill="#C4A265"/></svg>
+    <div class="site-logo-text">Walnut Creek<span>Remodeling</span></div>
+  </a>
+  <div class="header-right">
+    <a href="tel:4159079070" class="header-phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(415) 907-9070</a>
+    <a href="#contact" class="btn btn-gold" style="padding:12px 24px;font-size:14px">Get a Free Estimate</a>
+    <button class="menu-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </div>
-</nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
+  <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="#gallery" onclick="document.getElementById('mobileMenu').classList.remove('open')">Our Work</a>
+  <a href="#reviews" onclick="document.getElementById('mobileMenu').classList.remove('open')">Reviews</a>
+  <a href="#process" onclick="document.getElementById('mobileMenu').classList.remove('open')">How It Works</a>
+  <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a href="tel:4159079070">(415) 907-9070</a>
+</div>
+
+<!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <span class="hero-badge">Licensed & Insured Contractor</span>
-        <h1>Walnut Creek's Premier Remodeling Contractor</h1>
-        <p>Expert kitchen, bathroom, and full home remodeling for Walnut Creek's distinctive homes. Classic elegance meets modern functionality.</p>
-        <div class="hero-actions"><a href="tel:4159079070" class="btn btn-primary">Get Free Estimate</a><a href="#gallery" class="btn btn-primary" style="background:var(--dark)">View Our Work</a></div>
-        <div class="hero-stats">
-        <div class="hero-stat"><strong>21+</strong><span>Years Experience</span></div>
-        <div class="hero-stat"><strong>200+</strong><span>5-Star Reviews</span></div>
-        <div class="hero-stat"><strong>$0</strong><span>Down to Start</span></div>
-      </div>
-      </div>
-      <img class="hero-img" src="images/kitchen-11.jpg" alt="Walnut Creek home remodeling">
+  <div class="hero-slide" style="background-image:url('images/hero-bathroom-3.jpg')"></div>
+  <div class="hero-content">
+    <div class="hero-tagline">Consulting &middot; Designing &middot; Building</div>
+    <h1>Walnut Creek's Premier Remodeling Contractor</h1>
+    <p class="hero-desc">Expert kitchen, bathroom, and full home remodeling for Walnut Creek's distinctive homes. Classic elegance meets modern functionality.</p>
+    <a href="#gallery" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:#fff">View Our Projects</a>
+  </div>
+</section>
+
+<!-- PROMO CAROUSEL -->
+<section class="promo-bar">
+<div class="container">
+  <div style="overflow:hidden;border-radius:8px">
+    <div class="promo-slides" id="promoSlides">
+      <div class="promo-slide"><div class="promo-slide-inner"><h3>35% Off Kitchen Remodels</h3><p>Transform your kitchen with a complete remodel and take advantage of 35% off for a limited time!</p></div></div>
+      <div class="promo-slide"><div class="promo-slide-inner"><h3>25% Off Bathroom Remodels</h3><p>Upgrade your bathroom at a great price! Enjoy 25% off high-quality bathroom renovations.</p></div></div>
+      <div class="promo-slide"><div class="promo-slide-inner"><h3>Free 3D Design & Rendering</h3><p>Bring your vision to life with complimentary 3D designs and renderings before we build.</p></div></div>
     </div>
   </div>
-</section>
-<section class="contact-form-section" id="contact">
-<div class="form-layout">
-  <div class="form-pitch">
-    <h2>Get Your Free Estimate Today</h2>
-    <p>Tell us about your project and we'll get back to you with a detailed proposal — usually within 12 hours. No pressure, no obligation.</p>
-    <div class="form-trust-items"><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><strong>Licensed & Insured</strong><span>CA Lic. #1079020</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><strong>200+ Five-Star Reviews</strong><span>Trusted by Bay Area families</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><strong>Proposal in 12 Hours</strong><span>Fast, transparent pricing</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div><div><strong>Free 3D Design</strong><span>See your space before we build</span></div></div></div>
-  </div>
-  <div>
-    <form class="contact-form" id="contactForm" novalidate>
-      <div class="form-title">Request a Free Quote</div>
-      <div class="form-subtitle">We respond within 12 hours</div>
-      <label for="cf-name">Name</label>
-      <input type="text" id="cf-name" name="name" required placeholder="Your name" autocomplete="name">
-      <label for="cf-phone">Phone</label>
-      <input type="tel" id="cf-phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
-      <label for="cf-email">Email</label>
-      <input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email">
-      <label for="cf-message">Tell us about your project</label>
-      <textarea id="cf-message" name="message" required placeholder="Kitchen remodel, bathroom upgrade, addition — whatever you're thinking."></textarea>
-      <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-      <button type="submit">Get My Free Estimate</button>
-      <div class="form-status" id="formStatus"></div>
-      <div class="form-phone-fallback">Or call us: <a href="tel:4159079070">(415) 907-9070</a></div>
-    </form>
-    <noscript><p style="text-align:center;margin-top:16px;color:#999;">Forms require JavaScript. Call <a href="tel:4159079070" style="color:var(--primary);">(415) 907-9070</a> instead.</p></noscript>
+  <div class="promo-dots" id="promoDots">
+    <button class="promo-dot active" onclick="goPromo(0)"></button>
+    <button class="promo-dot" onclick="goPromo(1)"></button>
+    <button class="promo-dot" onclick="goPromo(2)"></button>
   </div>
 </div>
 </section>
-<section class="gallery-section" id="gallery">
-<div class="section-inner">
-  <div class="gallery-header">
-    <div class="gallery-label">Our Recent Work</div>
-    <h2>Real Projects. Real Results.</h2>
-    <p>Browse through our recent kitchen, bathroom, and outdoor remodeling projects — all completed right here in the Bay Area.</p>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+<div class="container">
+  <div class="section-header">
+    <span class="section-label">Home Remodeling Services</span>
+    <h2 class="section-title">Explore Our Comprehensive Remodeling Services</h2>
+    <p class="section-desc">Expect nothing less than excellence. We provide professional and reliable home remodeling that completely transforms your space, enhancing its function and style.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-kitchen-1.jpg" alt="Full Home Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Full Home Remodeling</h3><p>Update multiple rooms and enjoy a stylish home uniquely designed to meet your lifestyle and needs.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-kitchen-2.jpg" alt="Kitchen Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Kitchen Remodeling</h3><p>Improve function and appeal in your kitchen by modifying the structure, layout, or style.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-bathroom-2.jpg" alt="Bathroom Remodeling" loading="lazy"></div><div class="svc-card-body"><h3>Bathroom Remodeling</h3><p>Upgrade your bathroom, maximize space, and prioritize safety with quality fixtures and finishes.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-bathroom-3.jpg" alt="ADU Construction" loading="lazy"></div><div class="svc-card-body"><h3>ADU Construction</h3><p>Build a second dwelling to increase property value, improve sustainable living, or generate revenue.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-exterior-1.jpg" alt="Home Additions" loading="lazy"></div><div class="svc-card-body"><h3>Home Additions</h3><p>Create more living space with room additions that significantly improve your lifestyle and home value.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+    <div class="svc-card"><div class="svc-card-img"><img src="images/hero-outdoor-1.jpg" alt="Outdoor Remodel" loading="lazy"></div><div class="svc-card-body"><h3>Outdoor Remodel</h3><p>The outside of your home should be just as comfortable and enjoyable as the inside.</p><a href="#contact" class="link">Read More &rarr;</a></div></div>
+  </div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section section-gray" id="reviews">
+<div class="container">
+  <div class="section-header">
+    <span class="section-label">200+ 5-Star Reviews</span>
+    <h2 class="section-title">5-Star Reviews Across the Bay Area</h2>
+    <p class="section-desc">With hundreds of 5-star reviews across Google, Yelp, Houzz, and more, we are proud to be the trusted choice for home remodeling.</p>
+  </div>
+  <div class="reviews-track">
+    <div class="review-card"><div class="review-head"><div class="review-avatar">B</div><div><div class="review-name">Barbara & George H.</div><div class="review-date">3 weeks ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Our Walnut Creek colonial needed a kitchen that honored its traditional character while adding modern functionality. Shaker cabinets, quartz countertops, and a layout that works.</p></div>
+    <div class="review-card"><div class="review-head"><div class="review-avatar">S</div><div><div class="review-name">Steven R.</div><div class="review-date">1 month ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>The master bathroom remodel was worth every penny. Walk-in shower, double vanity, heated floors — they thought of everything.</p></div>
+    <div class="review-card"><div class="review-head"><div class="review-avatar">N</div><div><div class="review-name">Nancy & Tom W.</div><div class="review-date">2 months ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>From the 3D design to the final walkthrough, the experience was professional and enjoyable. Our kitchen is the talk of the neighborhood.</p></div>
+    <div class="review-card"><div class="review-head"><div class="review-avatar">D</div><div><div class="review-name">David L.</div><div class="review-date">3 months ago</div></div></div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>They remodeled our Rossmoor kitchen and both bathrooms. The coordination was seamless — minimal disruption to our daily routine.</p></div>
+  </div>
+  <div class="review-platforms">
+    <span>Google</span><span>&middot;</span><span>Yelp</span><span>&middot;</span><span>Houzz</span><span>&middot;</span><span>Angi</span><span>&middot;</span><span>Thumbtack</span>
+  </div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section" id="why">
+<div class="container">
+  <div class="section-header">
+    <span class="section-label">Why Choose Us</span>
+    <h2 class="section-title">Why Homeowners Trust Walnut Creek Remodeling</h2>
+  </div>
+  <div class="trust-grid">
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Licensed & Insured</h4><p>CA Lic. #1079020. Peace of mind with professional guarantees on every project.</p></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><h4>5-Star Rated</h4><p>Hundreds of glowing reviews on Google, Yelp, Houzz, and more.</p></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h4>Fast & Transparent</h4><p>Clear timelines, honest pricing, and proposals within 12 hours.</p></div></div>
+    <div class="trust-item"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div><div><h4>21+ Years Experience</h4><p>Built from a family legacy in construction. Excellence is always guaranteed.</p></div></div>
+  </div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-gray" id="process">
+<div class="container">
+  <div class="section-header">
+    <span class="section-label">How We Work</span>
+    <h2 class="section-title">A Stress-Free Remodeling Experience</h2>
+  </div>
+  <div class="process-grid">
+    <div class="proc-step"><h4>Consultation</h4><p>We visit your home, discuss your vision, assess the project, and understand your budget.</p></div>
+    <div class="proc-step"><h4>Proposal</h4><p>Receive a detailed, transparent proposal within 12 hours of your consultation.</p></div>
+    <div class="proc-step"><h4>3D Design</h4><p>See your remodel come to life with photorealistic 3D renderings before construction.</p></div>
+    <div class="proc-step"><h4>Materials</h4><p>Choose from premium materials with guidance from our experienced design team.</p></div>
+    <div class="proc-step"><h4>Construction</h4><p>Our skilled crews bring your project to life with meticulous attention to detail.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+<div class="container">
+  <div class="section-header">
+    <span class="section-label">Our Portfolio</span>
+    <h2 class="section-title">See Our Remodeling Projects in Action</h2>
+    <p class="section-desc">Each project is special to us, and our client reviews are a testament to our dedication to superior customer satisfaction.</p>
   </div>
   <div class="gallery-filters">
-    <button class="gallery-filter-btn active" onclick="filterGallery('all')">All Projects</button>
-    <button class="gallery-filter-btn" onclick="filterGallery('kitchen')">Kitchens</button>
-    <button class="gallery-filter-btn" onclick="filterGallery('bathroom')">Bathrooms</button>
-    <button class="gallery-filter-btn" onclick="filterGallery('outdoor')">Outdoor</button>
+    <button class="g-filter active" onclick="filterGallery('all')">All</button>
+    <button class="g-filter" onclick="filterGallery('kitchen')">Kitchens</button>
+    <button class="g-filter" onclick="filterGallery('bathroom')">Bathrooms</button>
+    <button class="g-filter" onclick="filterGallery('outdoor')">Outdoor</button>
+    <button class="g-filter" onclick="filterGallery('detail')">Details</button>
   </div>
   <div class="gallery-grid">
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(0)"><img src="images/kitchen-1.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(1)"><img src="images/kitchen-2.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(2)"><img src="images/kitchen-3.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(3)"><img src="images/kitchen-4.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(4)"><img src="images/kitchen-5.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(5)"><img src="images/kitchen-6.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(6)"><img src="images/kitchen-7.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(7)"><img src="images/kitchen-8.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(8)"><img src="images/kitchen-9.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(9)"><img src="images/kitchen-10.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(10)"><img src="images/kitchen-11.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" onclick="openLightbox(11)"><img src="images/kitchen-12.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" style="display:none" onclick="openLightbox(12)"><img src="images/kitchen-13.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" style="display:none" onclick="openLightbox(13)"><img src="images/kitchen-14.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="kitchen" style="display:none" onclick="openLightbox(14)"><img src="images/kitchen-15.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(15)"><img src="images/bathroom-1.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(16)"><img src="images/bathroom-2.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(17)"><img src="images/bathroom-3.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(18)"><img src="images/bathroom-4.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(19)"><img src="images/bathroom-5.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(20)"><img src="images/bathroom-6.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(21)"><img src="images/bathroom-7.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(22)"><img src="images/bathroom-8.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(23)"><img src="images/bathroom-9.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(24)"><img src="images/bathroom-10.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
-<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(25)"><img src="images/outdoor-1.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
-<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(26)"><img src="images/outdoor-2.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
-<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(27)"><img src="images/outdoor-3.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
-<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(28)"><img src="images/outdoor-4.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
-<div class="gallery-item" data-category="detail" style="display:none" onclick="openLightbox(29)"><img src="images/detail-1.jpg" alt="Craftsmanship Detail by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Craftsmanship Detail</span></div></div>
+    <div class="g-item" data-category="kitchen" onclick="openLightbox(0)"><img src="images/kitchen-1.jpg" alt="Kitchen Remodel" loading="lazy"><div class="g-ov"><span>Kitchen Remodel</span></div></div>
+    <div class="g-item" data-category="kitchen" onclick="openLightbox(1)"><img src="images/kitchen-2.jpg" alt="Kitchen Remodel" loading="lazy"><div class="g-ov"><span>Kitchen Remodel</span></div></div>
+    <div class="g-item" data-category="kitchen" onclick="openLightbox(2)"><img src="images/kitchen-3.jpg" alt="Kitchen Remodel" loading="lazy"><div class="g-ov"><span>Kitchen Remodel</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(3)"><img src="images/bathroom-1.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(4)"><img src="images/bathroom-2.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(5)"><img src="images/bathroom-3.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(6)"><img src="images/bathroom-4.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(7)"><img src="images/bathroom-5.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(8)"><img src="images/bathroom-6.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(9)"><img src="images/bathroom-7.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="bathroom" onclick="openLightbox(10)"><img src="images/bathroom-8.jpg" alt="Bathroom Renovation" loading="lazy"><div class="g-ov"><span>Bathroom Renovation</span></div></div>
+    <div class="g-item" data-category="outdoor" onclick="openLightbox(11)"><img src="images/outdoor-1.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(12)"><img src="images/outdoor-2.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(13)"><img src="images/outdoor-3.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(14)"><img src="images/outdoor-4.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(15)"><img src="images/outdoor-5.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(16)"><img src="images/outdoor-6.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(17)"><img src="images/outdoor-7.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(18)"><img src="images/outdoor-8.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(19)"><img src="images/outdoor-9.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(20)"><img src="images/outdoor-10.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(21)"><img src="images/outdoor-11.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(22)"><img src="images/outdoor-12.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(23)"><img src="images/outdoor-13.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(24)"><img src="images/outdoor-14.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="outdoor" style="display:none" onclick="openLightbox(25)"><img src="images/outdoor-15.jpg" alt="Outdoor Living" loading="lazy"><div class="g-ov"><span>Outdoor Living</span></div></div>
+    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(26)"><img src="images/detail-1.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
+    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(27)"><img src="images/detail-2.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
+    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(28)"><img src="images/detail-3.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
+    <div class="g-item" data-category="detail" style="display:none" onclick="openLightbox(29)"><img src="images/detail-4.jpg" alt="Craftsmanship Detail" loading="lazy"><div class="g-ov"><span>Craftsmanship Detail</span></div></div>
   </div>
-  <div class="gallery-show-more" id="showMoreBtn">
-    <button onclick="showAllPhotos()">View All 30 Photos</button>
-  </div>
+  <div class="g-more" id="showMoreBtn"><button onclick="showAllPhotos()">View All 30 Photos</button></div>
 </div>
 </section>
+
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
+  <button class="lb-close" onclick="closeLightbox()">&times;</button>
+  <button class="lb-nav lb-prev" onclick="navLightbox(-1)">&#8249;</button>
   <img id="lightbox-img" src="" alt="Project photo">
-  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
-  <div class="lightbox-counter" id="lightbox-counter"></div>
+  <button class="lb-nav lb-next" onclick="navLightbox(1)">&#8250;</button>
+  <div class="lb-count" id="lightbox-counter"></div>
 </div>
-<section class="services" id="services">
-  <div class="container">
-    <span class="section-label">What We Do</span>
-    <h2 class="section-title">Full-Service Remodeling for Walnut Creek Homes</h2>
-    <p class="section-subtitle">From start to finish, we handle every detail with precision and care.</p>
-    <div class="services-grid"><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div><div><h3>Kitchen Remodeling</h3><p>Complete kitchen renovations with custom cabinetry, stone countertops, premium appliances, and thoughtful layouts designed for how you live.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg></div><div><h3>Bathroom Remodeling</h3><p>Luxurious bathroom overhauls with walk-in showers, freestanding tubs, custom vanities, and high-end fixtures for a true spa experience.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><h3>Full Home Remodeling</h3><p>Whole-house renovations that reimagine your entire living space. We coordinate every trade and detail from start to finish.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><h3>ADU Construction</h3><p>Accessory dwelling units that add value and versatility to your property. Full design-build from permits to completion.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h3>Home Additions</h3><p>Expand your living space with seamless room additions that blend perfectly with your home's existing architecture and style.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div><div><h3>Outdoor Living</h3><p>Outdoor kitchens, patios, pergolas, and living spaces designed for year-round entertainment and relaxation.</p></div></div></div>
-  </div>
-</section>
-<section class="offers">
-  <div class="container text-center">
-    <span class="section-label">Limited-Time Offers</span>
-    <h2 class="section-title">Exclusive Savings for Walnut Creek Homeowners</h2>
-    <p class="section-subtitle mx-auto">Start your dream project today with premium materials, expert design, and unbeatable value.</p>
-    <div class="offers-grid"><div class="offer-card"><div class="offer-pct">35%</div><div class="offer-label">Off</div><h3>Kitchen Remodeling</h3><p>Complete kitchen transformations with custom cabinetry, quartz countertops, and premium finishes.</p></div><div class="offer-card"><div class="offer-pct">25%</div><div class="offer-label">Off</div><h3>Bathroom Remodeling</h3><p>Spa-inspired bathrooms with heated floors, frameless glass, and designer tile.</p></div><div class="offer-card"><div class="offer-pct">Free</div><div class="offer-label">Included</div><h3>3D Design Rendering</h3><p>Visualize your remodel before construction begins with photorealistic 3D renderings.</p></div></div>
-  </div>
-</section>
-<section class="process" id="process">
-  <div class="container text-center">
-    <span class="section-label">How It Works</span>
-    <h2 class="section-title">Our Proven 5-Step Process</h2>
-    <div class="process-steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h3>Free Consultation</h3><p>We visit your home, discuss your vision, and take measurements at no cost.</p></div></div><div class="step"><div class="step-number">2</div><div class="step-content"><h3>Proposal in 12hrs</h3><p>Receive a detailed, transparent proposal within 12 hours of your consultation.</p></div></div><div class="step"><div class="step-number">3</div><div class="step-content"><h3>3D Design</h3><p>See your project come to life with photorealistic 3D renderings before we start.</p></div></div><div class="step"><div class="step-number">4</div><div class="step-content"><h3>Materials Selection</h3><p>Choose from premium materials with guidance from our design team.</p></div></div><div class="step"><div class="step-number">5</div><div class="step-content"><h3>Construction</h3><p>Our skilled crews bring your project to life with meticulous attention to detail.</p></div></div></div>
-  </div>
-</section>
-<section class="reviews" id="reviews">
-  <div class="container text-center">
-    <span class="section-label">Homeowner Reviews</span>
-    <h2 class="section-title">Loved by Walnut Creek Families</h2>
-    <p class="section-subtitle mx-auto">See what our clients have to say about working with us.</p>
-    <div class="reviews-grid"><div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"Our Walnut Creek colonial needed a kitchen that honored its traditional character while adding modern functionality. Shaker cabinets, quartz countertops, and a layout that works."</blockquote>
-        <div class="review-author">Barbara & George H.</div>
-        <div class="review-location">Walnut Creek</div>
-      </div><div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote>"The master bathroom remodel was worth every penny. Walk-in shower, double vanity, heated floors — they thought of everything."</blockquote>
-        <div class="review-author">Steven R.</div>
-        <div class="review-location">Rossmoor</div>
-      </div></div>
-  </div>
-</section>
-<section class="local" id="local">
-  <div class="container">
-    <div class="local-split">
-      <img src="images/kitchen-1.jpg" alt="Walnut Creek home" class="local-img">
-      <div class="local-text">
-        <span class="section-label">Proudly Local</span>
-        <h3>Walnut Creek's Remodeling Experts</h3>
-        <p>From the established neighborhoods of Rossmoor to the vibrant downtown corridor, Walnut Creek homes deserve remodeling that respects their character while embracing modern comfort.</p>
-        <p>Deeply familiar with Walnut Creek building requirements and architectural guidelines. Licensed, insured, and locally trusted for over two decades.</p>
-        <ul><li>Walnut Creek Downtown</li><li>Rossmoor & Tice Valley</li><li>Northgate & Bancroft</li><li>Ygnacio Valley</li><li>Contra Costa Centre</li></ul>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="container">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <h2>Get Your Free Estimate Today</h2>
+      <p>Tell us about your project and we'll get back to you with a detailed proposal — usually within 12 hours. No pressure, no obligation.</p>
+      <div class="ct-list">
+        <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><strong>Licensed & Insured</strong><br><span class="ct-sub">CA Lic. #1079020</span></div></div>
+        <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><strong>200+ Five-Star Reviews</strong><br><span class="ct-sub">Trusted by Bay Area families</span></div></div>
+        <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><strong>Proposal in 12 Hours</strong><br><span class="ct-sub">Fast, transparent pricing</span></div></div>
+        <div class="ct-item"><div class="ct-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>1990 N. California Blvd, 8th Floor</strong><br><span class="ct-sub">Walnut Creek, CA 94596</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="contact-form-card">
+        <div class="cf-title">Request a Free Quote</div>
+        <div class="cf-sub">We respond within 12 hours</div>
+        <form id="contactForm" novalidate>
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required placeholder="Your name" autocomplete="name">
+          <label for="cf-phone">Phone</label>
+          <input type="tel" id="cf-phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email">
+          <label for="cf-msg">Tell us about your project</label>
+          <textarea id="cf-msg" name="message" required placeholder="Kitchen remodel, bathroom upgrade, addition — whatever you're thinking."></textarea>
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit">Get My Free Estimate</button>
+          <div class="form-status" id="formStatus"></div>
+          <div class="form-fb">Or call us: <a href="tel:4159079070">(415) 907-9070</a></div>
+        </form>
       </div>
     </div>
   </div>
+</div>
 </section>
-<section class="cta">
+
+<!-- FAQ -->
+<section class="section" id="faq">
+<div class="container">
+  <div class="section-header">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Are you licensed and insured?</button><div class="faq-a"><p>Yes. We are a licensed and insured general contractor (CA Lic. #1079020). Working with us gives you peace of mind knowing all professionals have the required qualifications and licensing to meet state requirements.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you offer any promotions?</button><div class="faq-a"><p>Yes. We currently offer free kitchen and bathroom 3D designs and rendering, 25% off bathroom remodels, and 35% off kitchen remodels.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost to remodel?</button><div class="faq-a"><p>Costs depend on the scope, materials, and labor. Kitchen remodels typically start around $30,000 and full home remodels at $150,000+. We provide detailed estimates within 12 hours of your consultation.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you handle permits and inspections?</button><div class="faq-a"><p>Yes. We handle all paperwork including permits and inspections. We are well-versed in local building codes for a hassle-free renovation.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you offer financing?</button><div class="faq-a"><p>Yes. We offer flexible financing options to make your dream remodel more affordable. Contact us to discuss available plans.</p></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What areas do you serve?</button><div class="faq-a"><p>We serve Walnut Creek and surrounding communities including Walnut Creek Downtown, Rossmoor, Tice Valley, Northgate, Bancroft, Ygnacio Valley, and Contra Costa Centre.</p></div></div>
+  </div>
+</div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-banner-bg"></div>
   <div class="container">
-    <h2>Ready to Transform Your Walnut Creek Home?</h2>
-    <p>Schedule your free consultation today. We'll bring ideas, answer your questions, and provide a detailed proposal within 12 hours.</p>
-    <div class="cta-actions">
-      <a href="tel:4159079070" class="btn btn-primary">Call for Free Estimate</a>
-      <a href="#services" class="btn btn-outline">View Services</a>
+    <div class="cta-banner-content">
+      <h2>Ready to Transform Your Home?</h2>
+      <p>Schedule your free in-home consultation today. We'll bring ideas, answer questions, and provide a detailed proposal within 12 hours.</p>
+      <a href="#contact" class="btn btn-gold">Get a Free Estimate</a>
+      <div class="phone-big"><a href="tel:4159079070">(415) 907-9070</a></div>
     </div>
-    <div class="cta-phone"><a href="tel:4159079070">(415) 907-9070</a></div>
   </div>
 </section>
-<footer>
-  <div class="container">
-    <span>Walnutcreekremodeling &mdash; Licensed & Insured General Contractor &mdash; Serving Walnut Creek</span>
-    <a href="tel:4159079070">(415) 907-9070</a>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-bg"></div>
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Walnut Creek <em>Remodeling</em></div>
+        <p class="footer-text">Walnut Creek's trusted home remodeling contractor. Kitchen, bathroom, and full home renovation with 21+ years of experience.</p>
+        <div class="footer-phone">Phone: <a href="tel:4159079070">(415) 907-9070</a></div>
+        <div style="margin-top:8px;font-size:13px">1990 N. California Blvd, 8th Floor, Walnut Creek, CA 94596</div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#services">Full Home Remodeling</a></li><li><a href="#services">Kitchen Remodeling</a></li><li><a href="#services">Bathroom Remodeling</a></li><li><a href="#services">ADU Construction</a></li><li><a href="#services">Home Additions</a></li><li><a href="#services">Outdoor Remodel</a></li></ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul><li><a href="#services">Services</a></li><li><a href="#gallery">Portfolio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#process">How It Works</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>Walnut Creek Remodeling &copy; 2026 &middot; CA License 1079020 &middot; All rights reserved.</span>
+      <span>Serving Walnut Creek & surrounding communities</span>
+    </div>
   </div>
-  <div class="footer-license">CA Lic. #1079020</div>
 </footer>
+
+<!-- STICKY CTA BAR -->
+<div class="sticky-bar">
+  <a href="tel:4159079070" class="btn btn-dark"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#fff;margin-right:6px;vertical-align:middle"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(415) 907-9070</a>
+  <a href="#contact" class="btn btn-gold">Get a Free Estimate</a>
+</div>
+
 <script>
-const galleryPhotos=['images/kitchen-1.jpg','images/kitchen-2.jpg','images/kitchen-3.jpg','images/kitchen-4.jpg','images/kitchen-5.jpg','images/kitchen-6.jpg','images/kitchen-7.jpg','images/kitchen-8.jpg','images/kitchen-9.jpg','images/kitchen-10.jpg','images/kitchen-11.jpg','images/kitchen-12.jpg','images/kitchen-13.jpg','images/kitchen-14.jpg','images/kitchen-15.jpg','images/bathroom-1.jpg','images/bathroom-2.jpg','images/bathroom-3.jpg','images/bathroom-4.jpg','images/bathroom-5.jpg','images/bathroom-6.jpg','images/bathroom-7.jpg','images/bathroom-8.jpg','images/bathroom-9.jpg','images/bathroom-10.jpg','images/outdoor-1.jpg','images/outdoor-2.jpg','images/outdoor-3.jpg','images/outdoor-4.jpg','images/detail-1.jpg'];
-const galleryLabels=['Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Outdoor Living','Outdoor Living','Outdoor Living','Outdoor Living','Craftsmanship Detail'];
-let currentPhoto=0;let visiblePhotos=galleryPhotos.map((_,i)=>i);
-function filterGallery(cat){
-document.querySelectorAll('.gallery-filter-btn').forEach(b=>b.classList.remove('active'));
-event.target.classList.add('active');
-const items=document.querySelectorAll('.gallery-item');let count=0;
-items.forEach(item=>{const show=cat==='all'||item.dataset.category===cat;item.style.display=show?'':'none';if(show)count++;});
-document.getElementById('showMoreBtn').style.display='none';
-visiblePhotos=[];items.forEach((item,i)=>{if(item.style.display!=='none')visiblePhotos.push(i);});}
-function showAllPhotos(){document.querySelectorAll('.gallery-item').forEach(item=>{if(item.dataset.category)item.style.display='';});
-document.getElementById('showMoreBtn').style.display='none';visiblePhotos=galleryPhotos.map((_,i)=>i);}
+var promoIdx=0;function goPromo(i){promoIdx=i;document.getElementById('promoSlides').style.transform='translateX(-'+i*33.333+'%)';document.querySelectorAll('.promo-dot').forEach(function(d,j){d.classList.toggle('active',j===i)});}setInterval(function(){goPromo((promoIdx+1)%3)},5000);
+</script>
+<script>
+const galleryPhotos=['images/kitchen-1.jpg','images/kitchen-2.jpg','images/kitchen-3.jpg','images/bathroom-1.jpg','images/bathroom-2.jpg','images/bathroom-3.jpg','images/bathroom-4.jpg','images/bathroom-5.jpg','images/bathroom-6.jpg','images/bathroom-7.jpg','images/bathroom-8.jpg','images/outdoor-1.jpg','images/outdoor-2.jpg','images/outdoor-3.jpg','images/outdoor-4.jpg','images/outdoor-5.jpg','images/outdoor-6.jpg','images/outdoor-7.jpg','images/outdoor-8.jpg','images/outdoor-9.jpg','images/outdoor-10.jpg','images/outdoor-11.jpg','images/outdoor-12.jpg','images/outdoor-13.jpg','images/outdoor-14.jpg','images/outdoor-15.jpg','images/detail-1.jpg','images/detail-2.jpg','images/detail-3.jpg','images/detail-4.jpg'];
+let currentPhoto=0,visiblePhotos=galleryPhotos.map((_,i)=>i);
+function filterGallery(cat){document.querySelectorAll('.g-filter').forEach(b=>b.classList.remove('active'));event.target.classList.add('active');document.querySelectorAll('.g-item').forEach(item=>{item.style.display=(cat==='all'||item.dataset.category===cat)?'':'none'});document.getElementById('showMoreBtn').style.display='none';visiblePhotos=[];document.querySelectorAll('.g-item').forEach((item,i)=>{if(item.style.display!=='none')visiblePhotos.push(i)});}
+function showAllPhotos(){document.querySelectorAll('.g-item').forEach(item=>{if(item.dataset.category)item.style.display=''});document.getElementById('showMoreBtn').style.display='none';visiblePhotos=galleryPhotos.map((_,i)=>i);}
 function openLightbox(idx){currentPhoto=idx;updateLightbox();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
 function navLightbox(dir){const ci=visiblePhotos.indexOf(currentPhoto);let ni=ci+dir;if(ni<0)ni=visiblePhotos.length-1;if(ni>=visiblePhotos.length)ni=0;currentPhoto=visiblePhotos[ni];updateLightbox();}
-function updateLightbox(){document.getElementById('lightbox-img').src=galleryPhotos[currentPhoto];const pos=visiblePhotos.indexOf(currentPhoto)+1;document.getElementById('lightbox-counter').textContent=pos+' / '+visiblePhotos.length;}
-document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
-document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')navLightbox(-1);if(e.key==='ArrowRight')navLightbox(1);});
-</script><script>
-(function(){
-var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
-if(!f)return;
-f.addEventListener('submit',function(e){
-e.preventDefault();
-s.className='form-status';s.textContent='';
-var b=f.querySelector('button[type="submit"]');b.disabled=true;b.textContent='Sending...';
-var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),
-       message:f.message.value.trim(),domain:location.hostname,website:f.website.value};
-if(!d.name||!d.phone||!d.email||!d.message){
-s.className='form-status error';s.textContent='Please fill in all fields.';
-b.disabled=false;b.textContent='Get My Free Estimate';return;}
-fetch('https://app.revnodeai.com/api/public/contact-form',{
-method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)
-}).then(function(r){return r.json()}).then(function(j){
-if(j.status==='ok'){s.className='form-status success';s.textContent='Thank you! We\'ll be in touch shortly.';f.reset();}
-else{s.className='form-status error';s.textContent=j.message||'Something went wrong. Please call us at (415) 907-9070.';}
-}).catch(function(){s.className='form-status error';s.textContent='Something went wrong. Please call us at (415) 907-9070.';
-}).finally(function(){b.disabled=false;b.textContent='Get My Free Estimate';});
-});
-})();
+function updateLightbox(){document.getElementById('lightbox-img').src=galleryPhotos[currentPhoto];document.getElementById('lightbox-counter').textContent=(visiblePhotos.indexOf(currentPhoto)+1)+' / '+visiblePhotos.length;}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox()});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')navLightbox(-1);if(e.key==='ArrowRight')navLightbox(1)});
+</script>
+<script>
+(function(){var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();s.className='form-status';s.textContent='';var b=f.querySelector('button[type="submit"]');b.disabled=true;b.textContent='Sending...';var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),message:f.message.value.trim(),domain:location.hostname,website:f.website.value};if(!d.name||!d.phone||!d.email||!d.message){s.className='form-status error';s.textContent='Please fill in all fields.';b.disabled=false;b.textContent='Get My Free Estimate';return;}fetch('https://app.revnodeai.com/api/public/contact-form',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json()}).then(function(j){if(j.status==='ok'){s.className='form-status success';s.textContent='Thank you! We\'ll be in touch shortly.';f.reset();}else{s.className='form-status error';s.textContent=j.message||'Something went wrong. Please call us.';}}).catch(function(){s.className='form-status error';s.textContent='Something went wrong. Please call us at (415) 907-9070.';}).finally(function(){b.disabled=false;b.textContent='Get My Free Estimate';});});})();
 </script>
 </body>
 </html>
