@@ -22,16 +22,6 @@
 body { font-family: 'Inter', sans-serif; color: var(--charcoal); line-height: 1.6; }
 h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; color: var(--navy); line-height: 1.2; }
 
-.top-bar { background: var(--navy); color: var(--white); padding: 10px 0; font-size: 14px; }
-.top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-.top-bar a { color: var(--amber-light); text-decoration: none; font-weight: 600; }
-header { background: var(--white); border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; }
-header .container { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; }
-.logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--navy); text-decoration: none; }
-.logo span { color: var(--amber); }
-nav { display: flex; gap: 28px; align-items: center; }
-nav a { text-decoration: none; color: var(--charcoal); font-size: 15px; font-weight: 500; transition: color 0.2s; }
-nav a:hover { color: var(--amber); }
 .btn { display: inline-block; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.25s; cursor: pointer; border: none; }
 .btn-primary { background: var(--amber); color: var(--white); }
 .btn-primary:hover { background: #B45309; transform: translateY(-1px); }
@@ -83,7 +73,7 @@ nav a:hover { color: var(--amber); }
 
 /* LOCAL — image behind with text overlay card */
 .local { padding: 80px 0; }
-.local-feature { position: relative; border-radius: 16px; overflow: hidden; min-height: 480px; display: flex; align-items: flex-end; background: url('') center/cover no-repeat; }
+.local-feature { position: relative; border-radius: 16px; overflow: hidden; min-height: 480px; display: flex; align-items: flex-end; background: url('images/kitchen-7.jpg') center/cover no-repeat; }
 .local-feature::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,42,65,0.92) 0%, rgba(27,42,65,0.3) 60%, transparent 100%); }
 .local-card { position: relative; z-index: 2; padding: 48px; color: var(--white); max-width: 720px; }
 .local-card h2 { color: var(--white); font-size: 34px; margin-bottom: 16px; }
@@ -127,17 +117,12 @@ footer { background: #0F1924; color: rgba(255,255,255,0.6); padding: 48px 0 24px
 footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
 footer a { color: var(--amber-light); text-decoration: none; }
 
-.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
 
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .nav-toggle { display: block; }
-  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-  nav.open { display: flex; }
-  .hero-grid { grid-template-columns: 1fr; }
+.hero-grid { grid-template-columns: 1fr; }
   .hero-text { padding: 48px 0; }
   .hero-image { height: 360px; }
   .hero-trust { flex-wrap: wrap; gap: 20px; }
@@ -149,50 +134,176 @@ footer a { color: var(--amber-light); text-decoration: none; }
   .timeline::before { display: none; }
   .offers-strip { flex-direction: column; }
   .local-card { padding: 32px; }
-  .top-bar .container { justify-content: center; text-align: center; }
+
 }
 
-.contact-form-section{padding:80px 20px;background:#fff;border-top:1px solid #E5E7EB;border-bottom:1px solid #E5E7EB}
-.contact-form-section h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(28px,4vw,40px);color:#1B2A41;margin-bottom:8px;text-align:center}
-.contact-form-section .subtitle{text-align:center;color:#6B7280;margin-bottom:36px;font-size:1.05rem;max-width:500px;margin-left:auto;margin-right:auto}
-.contact-form{max-width:480px;margin:0 auto;background:#F8FAFC;border-radius:16px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.06);border:1px solid #E5E7EB}
+/* ─── Photo Gallery ─── */
+.gallery-section { padding: 80px 0; background: #F8FAFC; }
+.gallery-section .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.gallery-header { text-align: center; margin-bottom: 48px; }
+.gallery-header .gallery-label {
+  display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: #D97706; margin-bottom: 12px;
+}
+.gallery-header h2 {
+  font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 4vw, 42px);
+  color: #1B2A41; margin-bottom: 16px;
+}
+.gallery-header p { color: #6B7280; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+.gallery-filters { display: flex; justify-content: center; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
+.gallery-filter-btn {
+  padding: 8px 20px; border: 2px solid #E5E7EB; border-radius: 24px; background: #fff;
+  font-size: 14px; font-weight: 600; color: #374151; cursor: pointer; transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+.gallery-filter-btn:hover { border-color: #D97706; color: #D97706; }
+.gallery-filter-btn.active { background: #D97706; color: #fff; border-color: #D97706; }
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.gallery-item {
+  position: relative; border-radius: 12px; overflow: hidden;
+  aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item .overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(27,42,65,0.7) 0%, transparent 50%);
+  opacity: 0; transition: opacity 0.3s;
+  display: flex; align-items: flex-end; padding: 20px;
+}
+.gallery-item:hover .overlay { opacity: 1; }
+.overlay-text { color: #fff; font-weight: 600; font-size: 15px; }
+.gallery-show-more {
+  text-align: center; margin-top: 36px;
+}
+.gallery-show-more button {
+  padding: 14px 36px; background: #1B2A41; color: #fff; border: none;
+  border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer;
+  font-family: 'Inter', sans-serif; transition: background 0.2s;
+}
+.gallery-show-more button:hover { background: #0F172A; }
+
+/* Lightbox */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 90vw; max-height: 85vh; border-radius: 8px;
+  object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute; top: 20px; right: 28px;
+  background: none; border: none; color: #fff; font-size: 36px;
+  cursor: pointer; z-index: 10001; opacity: 0.8; transition: opacity 0.2s;
+}
+.lightbox-close:hover { opacity: 1; }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.15); border: none; color: #fff;
+  font-size: 28px; padding: 12px 18px; cursor: pointer; border-radius: 6px;
+  transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox-counter {
+  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500;
+}
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+  .gallery-item { border-radius: 8px; }
+  .lightbox-nav { padding: 8px 12px; font-size: 22px; }
+}
+
+
+/* ─── Contact Form (top of page, two-column) ─── */
+.contact-form-section{padding:64px 0;background:linear-gradient(135deg,#0F172A 0%,#1B2A41 100%);color:#fff;position:relative;overflow:hidden}
+.contact-form-section::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(217,119,6,0.08) 0%,transparent 70%);pointer-events:none}
+.form-layout{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.form-pitch h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(30px,4vw,44px);color:#fff;margin-bottom:16px;line-height:1.15}
+.form-pitch p{color:rgba(255,255,255,0.8);font-size:1.05rem;line-height:1.7;margin-bottom:28px}
+.form-trust-items{display:flex;flex-direction:column;gap:16px}
+.form-trust-item{display:flex;align-items:center;gap:14px}
+.form-trust-icon{width:44px;height:44px;background:rgba(217,119,6,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.form-trust-icon svg{width:22px;height:22px;stroke:#D97706;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.form-trust-item strong{display:block;color:#fff;font-size:0.95rem;font-weight:600}
+.form-trust-item span{color:rgba(255,255,255,0.6);font-size:0.85rem}
+.contact-form{background:#fff;border-radius:16px;padding:36px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;z-index:2}
+.contact-form .form-title{font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:#1B2A41;margin-bottom:4px;text-align:center}
+.contact-form .form-subtitle{color:#6B7280;font-size:0.9rem;text-align:center;margin-bottom:24px}
 .contact-form label{display:block;font-weight:600;margin-bottom:4px;font-size:0.9rem;color:#1B2A41}
-.contact-form input,.contact-form textarea{width:100%;padding:12px 16px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:'Inter',system-ui,sans-serif;margin-bottom:14px;transition:border-color 0.2s,box-shadow 0.2s;background:#fff}
+.contact-form input,.contact-form textarea{width:100%;padding:11px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:0.95rem;font-family:'Inter',system-ui,sans-serif;margin-bottom:14px;transition:border-color 0.2s,box-shadow 0.2s}
 .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#D97706;box-shadow:0 0 0 3px rgba(217,119,6,0.1)}
-.contact-form textarea{min-height:90px;resize:vertical}
-.contact-form button{width:100%;background:#D97706;color:#fff;padding:16px;border:none;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s,transform 0.2s;font-family:'Inter',system-ui,sans-serif}
+.contact-form textarea{min-height:80px;resize:vertical}
+.contact-form button{width:100%;background:#D97706;color:#fff;padding:15px;border:none;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s,transform 0.2s;font-family:'Inter',system-ui,sans-serif}
 .contact-form button:hover{background:#B45309;transform:translateY(-1px);box-shadow:0 8px 24px rgba(217,119,6,0.3)}
 .contact-form button:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none}
-.form-status{text-align:center;margin-top:14px;font-size:0.9rem;min-height:20px}
+.form-status{text-align:center;margin-top:12px;font-size:0.9rem;min-height:20px}
 .form-status.success{color:#16a34a}
 .form-status.error{color:#dc2626}
+.form-phone-fallback{text-align:center;margin-top:12px;font-size:0.85rem;color:#6B7280}
+.form-phone-fallback a{color:#D97706;font-weight:600;text-decoration:none}
+@media(max-width:768px){
+.form-layout{grid-template-columns:1fr;gap:36px}
+.form-pitch{text-align:center}
+.form-trust-items{align-items:center}
+.contact-form-section{padding:48px 0}
+}
+
+
+/* ─── Standardized Navigation ─── */
+.site-nav{background:#fff;padding:0;border-bottom:1px solid #E5E7EB;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.site-nav .nav-inner{max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+.site-nav .nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:22px;color:#1B2A41;text-decoration:none;white-space:nowrap}
+.site-nav .nav-logo span{color:#D97706}
+.site-nav .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin:0;padding:0}
+.site-nav .nav-links a{font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:500;color:#374151;text-decoration:none;transition:color 0.2s;padding:6px 0}
+.site-nav .nav-links a:hover{color:#D97706}
+.site-nav .nav-links a.nav-cta-btn{background:#D97706;color:#fff !important;padding:10px 22px !important;border-radius:6px;font-weight:600;font-size:14px;transition:background 0.2s;display:inline-block}
+.site-nav .nav-links a.nav-cta-btn:hover{background:#B45309;color:#fff !important}
+.site-nav .nav-links a.nav-phone{font-weight:600;color:#1B2A41 !important;font-size:14px}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:#1B2A41;transition:all 0.3s}
+@media(max-width:768px){
+.nav-hamburger{display:flex}
+.site-nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;border-bottom:1px solid #E5E7EB;box-shadow:0 4px 12px rgba(0,0,0,0.08);gap:0}
+.site-nav .nav-links.open{display:flex}
+.site-nav .nav-links a{padding:12px 0;border-bottom:1px solid #f0f0f0;width:100%}
+.site-nav .nav-links a:last-child{border:none}
+.site-nav .nav-links a.nav-cta-btn{text-align:center;margin-top:8px;display:block;padding:12px 22px !important}
+}
+
 </style>
 </head>
 <body>
 
-<div class="top-bar">
-  <div class="container">
-    <span>Walnut Creek's Trusted Kitchen & Bath Remodelers</span>
-    <a href="tel:4159079070">(415) 907-9070 — Free Estimate</a>
-  </div>
+<!-- Navigation -->
+<nav class="site-nav">
+<div class="nav-inner">
+  <a href="#" class="nav-logo">Walnut Creek<span>Remodeling</span></a>
+  <button class="nav-hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Our Work</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="tel:4159079070" class="nav-phone">(415) 907-9070</a></li>
+<li><a href="#contact" class="nav-cta-btn">Free Estimate</a></li>
+  </ul>
 </div>
-
-<header>
-  <div class="container">
-    <a href="#" class="logo">Walnut Creek<span>Remodeling</span></a>
-    <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#process">Our Process</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#local">Our Area</a>
-      <a href="tel:4159079070" class="btn btn-primary">Free Estimate</a>
-          <a href="#contact" class="btn btn-primary" style="margin-left:12px;">Free Estimate</a>
 </nav>
-  </div>
-</header>
+
 
 <section class="hero">
   <div class="container">
@@ -212,11 +323,59 @@ footer a { color: var(--amber-light); text-decoration: none; }
         </div>
       </div>
       <div class="hero-image">
-        
+        <img src="images/kitchen-1.jpg" alt="Modern kitchen remodel with marble island and pendant lighting">
       </div>
     </div>
   </div>
 </section>
+
+<!-- ═══ CONTACT FORM — Top of Page ═══ -->
+<section class="contact-form-section" id="contact">
+<div class="form-layout">
+  <div class="form-pitch">
+    <h2>Get Your Free Estimate Today</h2>
+    <p>Tell us about your project and we'll get back to you with a detailed proposal — usually within 12 hours. No pressure, no obligation.</p>
+    <div class="form-trust-items">
+      <div class="form-trust-item">
+        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><strong>Licensed & Insured</strong><span>CA Lic. #1079020</span></div>
+      </div>
+      <div class="form-trust-item">
+        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div><strong>200+ Five-Star Reviews</strong><span>Trusted by Bay Area families</span></div>
+      </div>
+      <div class="form-trust-item">
+        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><strong>Proposal in 12 Hours</strong><span>Fast, transparent pricing</span></div>
+      </div>
+      <div class="form-trust-item">
+        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+        <div><strong>Free 3D Design</strong><span>See your space before we build</span></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-title">Request a Free Quote</div>
+      <div class="form-subtitle">We respond within 12 hours</div>
+      <label for="cf-name">Name</label>
+      <input type="text" id="cf-name" name="name" required placeholder="Your name" autocomplete="name">
+      <label for="cf-phone">Phone</label>
+      <input type="tel" id="cf-phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
+      <label for="cf-email">Email</label>
+      <input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email">
+      <label for="cf-message">Tell us about your project</label>
+      <textarea id="cf-message" name="message" required placeholder="Kitchen remodel, bathroom upgrade, addition — whatever you're thinking."></textarea>
+      <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit">Get My Free Estimate</button>
+      <div class="form-status" id="formStatus"></div>
+      <div class="form-phone-fallback">Or call us: <a href="tel:4159079070">(415) 907-9070</a></div>
+    </form>
+    <noscript><p style="text-align:center;margin-top:16px;color:#ccc;">Forms require JavaScript. Call us at <a href="tel:4159079070" style="color:#D97706;">(415) 907-9070</a> instead.</p></noscript>
+  </div>
+</div>
+</section>
+
 
 <section class="offers">
   <div class="container">
@@ -374,27 +533,135 @@ footer a { color: var(--amber-light); text-decoration: none; }
   </div>
 </section>
 
-<section class="contact-form-section" id="contact">
-<div style="max-width:960px;margin:0 auto;">
-<h2>Get Your Free Estimate</h2>
-<p class="subtitle">Tell us about your project and we'll get back to you right away.</p>
-<form class="contact-form" id="contactForm" novalidate>
-<label for="cf-name">Name</label>
-<input type="text" id="cf-name" name="name" required placeholder="Your name" autocomplete="name">
-<label for="cf-phone">Phone</label>
-<input type="tel" id="cf-phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel">
-<label for="cf-email">Email</label>
-<input type="email" id="cf-email" name="email" required placeholder="you@example.com" autocomplete="email">
-<label for="cf-message">Tell us about your project</label>
-<textarea id="cf-message" name="message" required placeholder="What are you looking to remodel? Any details help us give you a better estimate."></textarea>
-<input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-<button type="submit">Send Message</button>
-<div class="form-status" id="formStatus"></div>
-</form>
-<noscript><p style="text-align:center;margin-top:16px;color:#666;">Forms require JavaScript. Call us at <a href="tel:4159079070">(415) 907-9070</a> instead.</p></noscript>
+
+<!-- ═══ OUR WORK GALLERY ═══ -->
+<section class="gallery-section" id="gallery">
+<div class="section-inner">
+  <div class="gallery-header">
+    <div class="gallery-label">Our Recent Work</div>
+    <h2>Real Projects. Real Results.</h2>
+    <p>Browse through our recent kitchen, bathroom, and outdoor remodeling projects — all completed right here in the Bay Area.</p>
+  </div>
+  <div class="gallery-filters">
+    <button class="gallery-filter-btn active" onclick="filterGallery('all')">All Projects</button>
+    <button class="gallery-filter-btn" onclick="filterGallery('kitchen')">Kitchens</button>
+    <button class="gallery-filter-btn" onclick="filterGallery('bathroom')">Bathrooms</button>
+    <button class="gallery-filter-btn" onclick="filterGallery('outdoor')">Outdoor</button>
+  </div>
+  <div class="gallery-grid">
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(0)"><img src="images/kitchen-1.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(1)"><img src="images/kitchen-2.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(2)"><img src="images/kitchen-3.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(3)"><img src="images/kitchen-4.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(4)"><img src="images/kitchen-5.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(5)"><img src="images/kitchen-6.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(6)"><img src="images/kitchen-7.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(7)"><img src="images/kitchen-8.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(8)"><img src="images/kitchen-9.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(9)"><img src="images/kitchen-10.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(10)"><img src="images/kitchen-11.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" onclick="openLightbox(11)"><img src="images/kitchen-12.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" style="display:none" onclick="openLightbox(12)"><img src="images/kitchen-13.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" style="display:none" onclick="openLightbox(13)"><img src="images/kitchen-14.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="kitchen" style="display:none" onclick="openLightbox(14)"><img src="images/kitchen-15.jpg" alt="Kitchen Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Kitchen Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(15)"><img src="images/bathroom-1.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(16)"><img src="images/bathroom-2.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(17)"><img src="images/bathroom-3.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(18)"><img src="images/bathroom-4.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(19)"><img src="images/bathroom-5.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(20)"><img src="images/bathroom-6.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(21)"><img src="images/bathroom-7.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(22)"><img src="images/bathroom-8.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(23)"><img src="images/bathroom-9.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="bathroom" style="display:none" onclick="openLightbox(24)"><img src="images/bathroom-10.jpg" alt="Bathroom Remodel by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Bathroom Remodel</span></div></div>
+<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(25)"><img src="images/outdoor-1.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
+<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(26)"><img src="images/outdoor-2.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
+<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(27)"><img src="images/outdoor-3.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
+<div class="gallery-item" data-category="outdoor" style="display:none" onclick="openLightbox(28)"><img src="images/outdoor-4.jpg" alt="Outdoor Living by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Outdoor Living</span></div></div>
+<div class="gallery-item" data-category="detail" style="display:none" onclick="openLightbox(29)"><img src="images/detail-1.jpg" alt="Craftsmanship Detail by Tom" loading="lazy"><div class="overlay"><span class="overlay-text">Craftsmanship Detail</span></div></div>
+  </div>
+  <div class="gallery-show-more" id="showMoreBtn">
+    <button onclick="showAllPhotos()">View All 30 Photos</button>
+  </div>
 </div>
 </section>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
+  <img id="lightbox-img" src="" alt="Project photo">
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script>
+const galleryPhotos = ['images/kitchen-1.jpg', 'images/kitchen-2.jpg', 'images/kitchen-3.jpg', 'images/kitchen-4.jpg', 'images/kitchen-5.jpg', 'images/kitchen-6.jpg', 'images/kitchen-7.jpg', 'images/kitchen-8.jpg', 'images/kitchen-9.jpg', 'images/kitchen-10.jpg', 'images/kitchen-11.jpg', 'images/kitchen-12.jpg', 'images/kitchen-13.jpg', 'images/kitchen-14.jpg', 'images/kitchen-15.jpg', 'images/bathroom-1.jpg', 'images/bathroom-2.jpg', 'images/bathroom-3.jpg', 'images/bathroom-4.jpg', 'images/bathroom-5.jpg', 'images/bathroom-6.jpg', 'images/bathroom-7.jpg', 'images/bathroom-8.jpg', 'images/bathroom-9.jpg', 'images/bathroom-10.jpg', 'images/outdoor-1.jpg', 'images/outdoor-2.jpg', 'images/outdoor-3.jpg', 'images/outdoor-4.jpg', 'images/detail-1.jpg'];
+const galleryLabels = ['Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Outdoor Living', 'Outdoor Living', 'Outdoor Living', 'Outdoor Living', 'Craftsmanship Detail'];
+let currentPhoto = 0;
+let visiblePhotos = galleryPhotos.map((_, i) => i);
+
+function filterGallery(cat) {
+  document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  const items = document.querySelectorAll('.gallery-item');
+  let count = 0;
+  items.forEach(item => {
+    const show = cat === 'all' || item.dataset.category === cat;
+    item.style.display = show ? '' : 'none';
+    if (show) count++;
+  });
+  document.getElementById('showMoreBtn').style.display = 'none';
+  visiblePhotos = [];
+  items.forEach((item, i) => { if (item.style.display !== 'none') visiblePhotos.push(i); });
+}
+
+function showAllPhotos() {
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    if (item.dataset.category) item.style.display = '';
+  });
+  document.getElementById('showMoreBtn').style.display = 'none';
+  visiblePhotos = galleryPhotos.map((_, i) => i);
+}
+
+function openLightbox(idx) {
+  currentPhoto = idx;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function navLightbox(dir) {
+  const currentIdx = visiblePhotos.indexOf(currentPhoto);
+  let nextIdx = currentIdx + dir;
+  if (nextIdx < 0) nextIdx = visiblePhotos.length - 1;
+  if (nextIdx >= visiblePhotos.length) nextIdx = 0;
+  currentPhoto = visiblePhotos[nextIdx];
+  updateLightbox();
+}
+
+function updateLightbox() {
+  document.getElementById('lightbox-img').src = galleryPhotos[currentPhoto];
+  const pos = visiblePhotos.indexOf(currentPhoto) + 1;
+  document.getElementById('lightbox-counter').textContent = pos + ' / ' + visiblePhotos.length;
+}
+
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (!document.getElementById('lightbox').classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
+</script>
 <section class="cta">
   <div class="container">
     <div class="cta-grid">
@@ -423,11 +690,10 @@ footer a { color: var(--amber-light); text-decoration: none; }
     <span>Walnut Creek Remodeling &mdash; Licensed & Insured &mdash; Downtown WC, Rossmoor, Saranap & Surrounding Areas</span>
     <a href="tel:4159079070">(415) 907-9070</a>
   </div>
-<span style="display:block;margin-top:8px;font-size:0.8rem;opacity:0.7;">CA Lic. #1079020</span>
+
+<div style="text-align:center;padding:8px 0 0;font-size:0.8rem;opacity:0.6;color:rgba(255,255,255,0.5);">CA Lic. #1079020</div>
 </footer>
 
-
-    
 <script>
 (function(){
 var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
